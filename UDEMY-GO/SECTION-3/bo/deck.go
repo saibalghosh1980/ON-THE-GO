@@ -1,5 +1,7 @@
 package bo
 
+import "strings"
+
 type Deck []string
 
 func CreateDeck() Deck {
@@ -21,9 +23,5 @@ func Deal(deck Deck, handSize int) (Deck, Deck) {
 }
 
 func (deck Deck) ToString() string {
-	var concatenatedString string
-	for _, item := range deck {
-		concatenatedString = concatenatedString + item
-	}
-	return concatenatedString
+	return strings.Join(deck, ":")
 }

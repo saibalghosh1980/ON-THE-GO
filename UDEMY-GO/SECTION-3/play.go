@@ -28,6 +28,9 @@ func main() {
 	log.Info(*pointerToremainingDeck)
 
 	//dataToWrite := []byte("Hello World!!!!")
-	ioutil.WriteFile("./deck.dat", []byte(remainingDeck.ToString()), 0644)
+	error := ioutil.WriteFile("./deck.dat", []byte(remainingDeck.ToString()), 0644)
+	if error == nil {
+		log.Info("File creation success!!!!")
+	}
 
 }
