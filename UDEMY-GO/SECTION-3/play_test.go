@@ -7,7 +7,7 @@ import (
 
 func TestNewDeck(t *testing.T) {
 	deck := bo.CreateDeck()
-	if len(deck) != 12 {
+	if len(deck) != 11 {
 		t.Errorf("Expected 16")
 	}
 }
